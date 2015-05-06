@@ -138,7 +138,7 @@ function update_rc_files(){
         /usr/bin/wget -q -O ~/.zshrc https://raw.githubusercontent.com/corebug/dotfiles/master/zshrc ;
         /usr/bin/wget -q -O ~/.vimrc https://raw.githubusercontent.com/corebug/dotfiles/master/vimrc ;
         /usr/bin/wget -q -O ~/.tmux.conf https://raw.githubusercontent.com/corebug/dotfiles/master/tmux.conf ;
-        wget https://raw.github.com/corebug/LS_COLORS/master/LS_COLORS -O ~/.dircolors
+        /usr/bin/wget -q  -O ~/.dircolors https://raw.githubusercontent.com/corebug/LS_COLORS/master/LS_COLORS 
         source ~/.zshrc
         echo "rc files were succesfully updated."
 

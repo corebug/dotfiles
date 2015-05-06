@@ -1,7 +1,7 @@
 This repo contains my dotfiles that simplify my life in Linux environments.
 
 
- ** Installation **
+ Installation
 =========
 ```bash
 wget -q -O ~/.zshrc https://raw.githubusercontent.com/corebug/dotfiles/master/zshrc

@@ -1,4 +1,4 @@
-"set tabstop=3 
+"set tabstop=3
 "set shiftwidth=4
 syntax on
 set hlsearch
@@ -80,3 +80,5 @@ nmap <F1> :set<Space>nu!<CR>
 imap <F3> <Esc>:set<Space>paste<CR>i
 nmap <F3> <Esc>:set<Space>nopaste<CR>
 
+" Delete trailing whitespaces on F5
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

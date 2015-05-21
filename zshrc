@@ -27,7 +27,7 @@ if [[ "$(uname -s)" = "FreeBSD" ]] then
 	if [ -f /usr/local/bin/vim ]; then
 		export VISUAL=/usr/local/bin/vim
 		export EDITOR=/usr/local/bin/vim
-		else 
+		else
 		export VISUAL=/usr/bin/ee
 		export EDITOR=/usr/bin/ee
 	fi
@@ -50,7 +50,7 @@ if [[ "$(uname -s)" = "Linux" ]] then
 	if [ -f /usr/bin/vim ]; then
 		export VISUAL=/usr/bin/vim
 		export EDITOR=/usr/bin/vim
-		else 
+		else
 		export VISUAL=/usr/bin/nano
 		export EDITOR=/usr/bin/nano
 	fi
@@ -138,7 +138,7 @@ function update_rc_files(){
         /usr/bin/wget -q -O ~/.zshrc https://raw.githubusercontent.com/corebug/dotfiles/master/zshrc ;
         /usr/bin/wget -q -O ~/.vimrc https://raw.githubusercontent.com/corebug/dotfiles/master/vimrc ;
         /usr/bin/wget -q -O ~/.tmux.conf https://raw.githubusercontent.com/corebug/dotfiles/master/tmux.conf ;
-        /usr/bin/wget -q  -O ~/.dircolors https://raw.githubusercontent.com/corebug/LS_COLORS/master/LS_COLORS 
+        /usr/bin/wget -q  -O ~/.dircolors https://raw.githubusercontent.com/corebug/LS_COLORS/master/LS_COLORS
         source ~/.zshrc
         echo "rc files were succesfully updated."
 
@@ -171,6 +171,8 @@ alias tt="tracepath"
 alias ss="sudo sudo -u"
 alias s="sudo"
 alias ta="tmux attach"
+alias trailing_whitespaces='find . -name "*" -type f | xargs egrep -l ".* +$"'
+alias remove_trailing_whitespaces="sed -i 's/\s*$//g'"
 
 # Host-specific shell variables and aliases
 if [ -d ~/.host_specific_vars ] ; then

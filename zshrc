@@ -171,6 +171,7 @@ alias tt="tracepath"
 alias ss="sudo sudo -u"
 alias s="sudo"
 alias ta="tmux attach"
+alias lsn='stat -c "%a %n"'
 alias trailing_whitespaces='find . -name "*" -type f | xargs egrep -l ".* +$"'
 alias remove_trailing_whitespaces="sed -i 's/\s*$//g'"
 

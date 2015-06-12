@@ -178,6 +178,9 @@ alias remove_trailing_whitespaces="sed -i 's/\s*$//g'"
 # Host-specific shell variables and aliases
 if [ -d ~/.host_specific_vars ] ; then
     if find ~/.host_specific_vars -mindepth 1 -print -quit | grep -q .; then
-        source ~/.host_specific_vars/*
+        for FILE in `find ~/.host_specific_vars -type f` ; do
+            source ${FILE}
+        done
     fi
 fi
+

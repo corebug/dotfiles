@@ -175,6 +175,7 @@ alias lsn='stat -c "%a %n"'
 alias trailing_whitespaces='find . -name "*" -type f | xargs egrep -l ".* +$"'
 alias remove_trailing_whitespaces="sed -i 's/\s*$//g'"
 alias ips='grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
+alias pp='python -c "import sys, json; print json.dumps(json.load(sys.stdin), sort_keys=True, indent=4)"'
 
 # Host-specific shell variables and aliases
 if [ -d ~/.host_specific_vars ] ; then
